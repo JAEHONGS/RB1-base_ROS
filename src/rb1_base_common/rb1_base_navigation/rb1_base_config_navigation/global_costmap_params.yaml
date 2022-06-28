@@ -1,0 +1,15 @@
+global_costmap:
+  global_frame: map
+  robot_base_frame: rb1_base_base_link #rb1_base_base_footprint
+  update_frequency: 1.0
+  publish_frequency: 1.0
+  static_map: true
+  rolling_window: false
+
+  plugins:
+  - {name: static_layer, type: "costmap_2d::StaticLayer"}
+#  - {name: obstacle_layer, type: "costmap_2d::VoxelLayer"}
+  - {name: inflation_layer_global, type: "costmap_2d::InflationLayer"}
+
+  # robot radius +safety_delta 0.25 + 0.02
+  # set to permit drawing a trajectory through the narrowest door

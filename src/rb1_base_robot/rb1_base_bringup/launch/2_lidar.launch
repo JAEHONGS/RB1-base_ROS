@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<launch>
+
+	<!-- hokuyo_ust -->
+	<include file="$(find rb1_base_bringup)/launch/hokuyo_ust.launch"/>
+
+
+	<!-- velodyne VLP-16 -->
+	<include file="$(find velodyne_pointcloud)/launch/velhong.launch"/>
+
+	<!-- lidar tf publisher -->
+	<node name="rb1_tf_publisher" pkg="rb1_tf_publisher" type="rb1_tf_publisher_node"/>
+
+</launch>

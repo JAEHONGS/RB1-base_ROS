@@ -1,0 +1,6 @@
+<launch>
+  <!-- use command: roslaunch screen  jackal_teleop_keyboard keyboard.launch -->
+  <node pkg="jackal_teleop_keyboard" type="jackal_teleop_keyboard_node" name="jackal_teleop_keyboard_node" output="screen">
+  	<param name="use_action" value="false" />
+  </node>
+</launch>
